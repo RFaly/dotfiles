@@ -34,7 +34,7 @@ vim.api.nvim_set_keymap('x', 'K', ':move \'<-2<CR>gv-gv\'', { noremap = true, si
 -- create new tab
 vim.api.nvim_set_keymap('n', ',', ':tabedit<CR>', { noremap = true, silent = true })
 -- remove current tab
-vim.api.nvim_set_keymap('n', '<Leader>c', ':tabclose<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>t', ':tabclose<CR>', { noremap = true, silent = true })
 
 
 

@@ -1,5 +1,4 @@
-vim.cmd('colorscheme gruvbox')
-vim.o.background="dark"
+vim.o.termguicolors=true --color in terminal
 
 vim.o.clipboard="unnamedplus"  --Copy/Paste between vim and everything else
 vim.o.number=true --Show line numbers
@@ -13,9 +12,6 @@ vim.o.smarttab=true    --Makes tabbing smarter will realize you have 2 vs 4
 vim.o.backup=false  -- recommended by coc
 vim.o.writebackup=false -- recommended by coc
 vim.o.swapfile=false -- recommended by coc (ngamba)
-
-vim.o.termguicolors=true --color in terminal
--- vim.o.t_Co="256" --Support 256 colors
 
 vim.o.encoding="utf-8" --The encoding displayed
 vim.o.fileencoding="utf-8" --The encoding written to file
@@ -45,4 +41,6 @@ vim.o.laststatus=2 --Always display the status line
 
 vim.o.conceallevel=0 --So that I can see `` in markdown files
 vim.o.guifont="JetBrainsMono\\ Nerd\\ Fond\\ Mono:h18"
+
+vim.cmd('colorscheme NeoSolarized')
 

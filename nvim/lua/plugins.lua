@@ -20,8 +20,7 @@ return require('packer').startup(function()
   use 'christoomey/vim-tmux-navigator'
   use 'mbbill/undotree'
  
-  use 'morhetz/gruvbox'
-
+  use 'overcache/NeoSolarized'
   -- fuzy file searcher with fzf
   
   -- fzf
@@ -29,6 +28,10 @@ return require('packer').startup(function()
   use {'junegunn/fzf.vim'}
   use 'pbogut/fzf-mru.vim'
 
+  use 'vim-airline/vim-airline'
+  use 'vim-airline/vim-airline-themes'
+
+  use "lukas-reineke/indent-blankline.nvim"
 end)
 -- :PackerInstall for installing plugin
 -- nnoremap <leader>u :UndotreeShow<CR>
