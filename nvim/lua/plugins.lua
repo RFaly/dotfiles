@@ -20,16 +20,18 @@ return require('packer').startup(function()
   use 'christoomey/vim-tmux-navigator'
   use 'mbbill/undotree'
  
-  use 'overcache/NeoSolarized'
-  -- fuzy file searcher with fzf
   
   -- fzf
   use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
   use {'junegunn/fzf.vim'}
   use 'pbogut/fzf-mru.vim'
 
+  use 'morhetz/gruvbox'
+  -- use 'overcache/NeoSolarized'
+  -- fuzy file searcher with fzf
   use 'vim-airline/vim-airline'
   use 'vim-airline/vim-airline-themes'
+  use 'vim-ruby/vim-ruby'
 
   use "lukas-reineke/indent-blankline.nvim"
 end)

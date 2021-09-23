@@ -1,4 +1,5 @@
 vim.o.termguicolors=true --color in terminal
+vim.cmd('colorscheme gruvbox')
 
 vim.o.clipboard="unnamedplus"  --Copy/Paste between vim and everything else
 vim.o.number=true --Show line numbers
@@ -42,5 +43,12 @@ vim.o.laststatus=2 --Always display the status line
 vim.o.conceallevel=0 --So that I can see `` in markdown files
 vim.o.guifont="JetBrainsMono\\ Nerd\\ Fond\\ Mono:h18"
 
-vim.cmd('colorscheme NeoSolarized')
+
+
+vim.cmd('set nocompatible')      -- We're running Vim, not Vi!
+vim.cmd('syntax on')             -- Enable syntax highlighting
+vim.cmd('filetype on')           -- Enable filetype detection
+vim.cmd('filetype indent on')    -- Enable filetype-specific indenting
+vim.cmd('filetype plugin on')    -- Enable filetype-specific plugins
+
 

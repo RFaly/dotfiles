@@ -73,9 +73,25 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/completion-nvim"
   },
+  fzf = {
+    loaded = true,
+    path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/fzf"
+  },
+  ["fzf-mru.vim"] = {
+    loaded = true,
+    path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/fzf-mru.vim"
+  },
+  ["fzf.vim"] = {
+    loaded = true,
+    path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/fzf.vim"
+  },
   gruvbox = {
     loaded = true,
     path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/gruvbox"
+  },
+  ["indent-blankline.nvim"] = {
+    loaded = true,
+    path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim"
   },
   ["nvim-compe"] = {
     loaded = true,
@@ -105,6 +121,14 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/undotree"
   },
+  ["vim-airline"] = {
+    loaded = true,
+    path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/vim-airline"
+  },
+  ["vim-airline-themes"] = {
+    loaded = true,
+    path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/vim-airline-themes"
+  },
   ["vim-commentary"] = {
     loaded = true,
     path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/vim-commentary"
@@ -112,6 +136,10 @@ _G.packer_plugins = {
   ["vim-fugitive"] = {
     loaded = true,
     path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/vim-fugitive"
+  },
+  ["vim-ruby"] = {
+    loaded = true,
+    path = "/home/ftomady/.local/share/nvim/site/pack/packer/start/vim-ruby"
   },
   ["vim-surround"] = {
     loaded = true,
