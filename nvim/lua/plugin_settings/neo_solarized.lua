@@ -1,3 +1,0 @@
---vim.o.background="dark"
---vim.g.neosolarized_contrast = 'low'
---
