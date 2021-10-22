@@ -1,5 +1,6 @@
 vim.o.termguicolors=true --color in terminal
-vim.cmd('colorscheme gruvbox')
+
+vim.cmd('highlight Comment cterm=italic gui=italic')
 
 vim.o.clipboard="unnamedplus"  --Copy/Paste between vim and everything else
 vim.o.number=true --Show line numbers
@@ -21,11 +22,7 @@ vim.o.cursorline=true --Enbale highlighting of the current line
 
 vim.o.signcolumn="yes" --Always show the signcolumn, otherwise it would shift the text each time
 
--- nvim ram en ajoutant ça
--- vim.o.updatetime=300 --Faster completion
--- vim.o.timeoutlen=100 --By default timeoutlen is 1000ms
-
--- vim.o.showmode=false --Don't show the current mode in vim
+vim.g.webdevicons_enable_startify=1
 
 vim.o.showtabline=2 --Always show tabs
 
@@ -41,14 +38,11 @@ vim.o.splitright=true --Vertical splits will automatically be to the right
 vim.o.laststatus=2 --Always display the status line
 
 vim.o.conceallevel=0 --So that I can see `` in markdown files
-vim.o.guifont="JetBrainsMono\\ Nerd\\ Fond\\ Mono:h18"
 
-
+vim.o.guifont="Menlo\\ Nerd\\ Fond\\ Mono:h18"
 
 vim.cmd('set nocompatible')      -- We're running Vim, not Vi!
 vim.cmd('syntax on')             -- Enable syntax highlighting
 vim.cmd('filetype on')           -- Enable filetype detection
 vim.cmd('filetype indent on')    -- Enable filetype-specific indenting
 vim.cmd('filetype plugin on')    -- Enable filetype-specific plugins
-
-
