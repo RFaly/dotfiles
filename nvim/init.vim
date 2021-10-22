@@ -6,5 +6,5 @@ lua require('keymappings')
 lua require('settings')
 lua require('plugin_settings/fzf')
 lua require('plugin_settings/fzf_mru')
-lua require('plugin_settings/neo_solarized')
 lua require('plugin_settings/material')
+
