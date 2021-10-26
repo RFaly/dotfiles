@@ -18,6 +18,10 @@ vim.api.nvim_set_keymap('n', '<C-l>', '<C-w>l', { silent = true })
 vim.api.nvim_set_keymap('v', '<', '<gv', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('v', '>', '>gv', { noremap = true, silent = true })
 
+-- resize window
+vim.api.nvim_set_keymap('n', '<Leader>è', ':vertical resize +5<CR>', { noremap = true, silent = true })
+vim.api.nvim_set_keymap('n', '<Leader>-', ':vertical resize -5<CR>', { noremap = true, silent = true })
+
 -- I hate escape
 vim.api.nvim_set_keymap('i', 'kj', '<ESC>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', { noremap = true, silent = true })
