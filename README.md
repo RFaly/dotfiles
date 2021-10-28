@@ -7,3 +7,8 @@ git clone https://github.com/wbthomason/packer.nvim\
 ```
 [packer]: https://github.com/wbthomason/packer.nvim
 
+install: 
+```
+brew install ripgrep
+```
+
