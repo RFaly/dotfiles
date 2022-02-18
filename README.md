@@ -15,5 +15,3 @@ brew install ripgrep
 used
 nvim/lua/plugin_settings/gist_file.rb
 
-
-
