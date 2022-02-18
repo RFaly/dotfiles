@@ -7,4 +7,5 @@ lua require('settings')
 lua require('plugin_settings/fzf')
 lua require('plugin_settings/fzf_mru')
 lua require('plugin_settings/material')
+lua require('plugin_settings/setup_lsp')
 
