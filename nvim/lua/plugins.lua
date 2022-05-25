@@ -1,46 +1,89 @@
 return require('packer').startup(function()
-  -- Packer can manage itself
-  use 'wbthomason/packer.nvim'
+-- Package manager
+use 'wbthomason/packer.nvim'
 
-  -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'nvim-lua/completion-nvim'
+-- Gruvbox colorscheme
+use 'sainnhe/gruvbox-material'
 
-  use 'nanotee/nvim-lua-guide'
-  use 'hrsh7th/nvim-compe'
+-- Impove Vue-JS lint
+use 'posva/vim-vue'
 
-  use {
-   'kyazdani42/nvim-tree.lua',
-    requires = 'kyazdani42/nvim-web-devicons',
-    config = function() require'nvim-tree'.setup {} end
-  }
+-- Improve colorscheme for each language
+use {
+  'nvim-treesitter/nvim-treesitter',
+  run = ':TSUpdate'
+}
 
-  use {
-    'nvim-lualine/lualine.nvim',
-    requires = {'kyazdani42/nvim-web-devicons', opt = true}
-  }
+-- This plugin adds indentation guides to all lines
+use "lukas-reineke/indent-blankline.nvim"
 
-  use 'tpope/vim-fugitive'
-  use 'tpope/vim-commentary'
-  use 'tpope/vim-surround'
+-- Bottom status bar
+use {
+  'nvim-lualine/lualine.nvim',
+  requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+}
 
-  use 'christoomey/vim-tmux-navigator'
-  use 'mbbill/undotree'
+-- Collection of configurations for the built-in LSP client
+use 'neovim/nvim-lspconfig'
+-- that help us with completion when we are writing our code,
+use 'hrsh7th/nvim-compe'
+use 'hrsh7th/vim-vsnip'
 
-  -- fuzy file searcher with fzf
-  use {'junegunn/fzf', dir = '~/.fzf', run = './install --all' }
-  use {'junegunn/fzf.vim'}
-  use 'pbogut/fzf-mru.vim'
+-- Plugins for rails-workspace
+use 'thoughtbot/vim-rspec'
+use 'tpope/vim-rails'
+use 'tpope/vim-endwise'
 
-  -- https://github.com/marko-cerovac/material.nvim/blob/main/README.md
-  use 'marko-cerovac/material.nvim'
+-- use git on neovim
+use 'tpope/vim-fugitive'
 
-  use 'vim-ruby/vim-ruby'
+-- File Explorer: fuzy finder
+use {
+  'nvim-telescope/telescope.nvim',
+  requires = { {'nvim-lua/plenary.nvim'}, {'nvim-lua/popup.nvim'} }
+}
+-- File Explorer: like on sublime text
+-- Plug 'ms-jpq/chadtree', {'branch': 'chad', 'do': 'python3 -m chadtree deps'}
+use {
+  'ms-jpq/chadtree',
+  branch = 'chad',
+  run = 'python3 -m pip install chadtree && python3 -m chadtree deps'
+  -- run = 'python3 -m chadtree deps'
+}
 
-  use "lukas-reineke/indent-blankline.nvim"
+-- File Explorer -- file explorer for keyboar
+use 'sjbach/lusty'
+
+-- Text searcher
+use 'mileszs/ack.vim'
+
+-- Text manipulation
+use 'tpope/vim-surround'
 end)
+
 -- :PackerInstall for installing plugin
 -- nnoremap <leader>u :UndotreeShow<CR>
 
+--[[
+-- You must 
+-- Regenerate compiled loader file
+:PackerCompile
 
+-- Remove any disabled or unused plugins
+:PackerClean
 
+-- Clean, then install missing plugins
+:PackerInstall
+
+-- Clean, then update and install plugins
+:PackerUpdate
+
+-- Perform `PackerUpdate` and then `PackerCompile`
+-- run this or `PackerSync` whenever you make changes to your plugin configuration
+:PackerSync
+
+-- Loads opt plugin immediately
+:PackerLoad completion-nvim ale
+--]]
+
+--Plug 'preservim/nerdtree'

@@ -5,9 +5,6 @@ vim.g.mapleader = ' '
 -- no hls
 vim.api.nvim_set_keymap('n', '<Leader>h', ':set hlsearch!<CR>', { noremap = true, silent = true })
 
--- explore
-vim.api.nvim_set_keymap('n', '<Leader>e', ':NvimTreeToggle<CR>', { noremap = true, silent = true })
-
 -- better window movement
 vim.api.nvim_set_keymap('n', '<C-h>', '<C-w>h', { silent = true })
 vim.api.nvim_set_keymap('n', '<C-j>', '<C-w>j', { silent = true })
@@ -40,6 +37,5 @@ vim.api.nvim_set_keymap('n', ',', ':tabedit<CR>', { noremap = true, silent = tru
 -- remove current tab
 vim.api.nvim_set_keymap('n', '<Leader>t', ':tabclose<CR>', { noremap = true, silent = true })
 
-
-
+vim.o.clipboard="unnamedplus"
 
