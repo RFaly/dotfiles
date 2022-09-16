@@ -12,3 +12,7 @@ install:
 brew install ripgrep
 ```
 
+create a link on .config folder:
+```
+ln -s ~/dotfiles/nvim ~/.config/nvim
+```

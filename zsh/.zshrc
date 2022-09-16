@@ -1,9 +1,8 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
-# Path to your oh-my-zsh installation.
-export ZSH="/Users/mtomady/.oh-my-zsh"
 
-eval "$(rbenv init - zsh)"
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
 
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
@@ -87,12 +86,12 @@ export JAVA_HOME=/Library/Internet\ Plug-Ins/JavaAppletPlugin.plugin/Contents/Ho
 alias be="bundle exec"
 alias rspec="be rspec"
 alias brew="HOMEBREW_NO_AUTO_UPDATE=1 brew"
-alias app="cd ~/Desktop/mtomady/mtomady-app"
+alias app="cd ~/Desktop/mtomady-app"
 alias lint="be rubocop -A"
 
-# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
-# export PATH="$PATH:$HOME/.rvm/bin"
+alias c="clear"
 
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="/usr/local/opt/libpq/bin:$PATH"
 export PATH="/usr/local/opt/gnupg@1.4/libexec/gpgbin:$PATH"
 export GPG_TTY=$(tty)
@@ -100,22 +99,16 @@ export PATH="$PATH:/usr/local/bin"
 export GEM_HOME="$HOME/.gem"
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 
-# This function: tat
-#
-# gets the name of the current directory and removes periods, which tmux doesn’t like.
-# if any session with the same name is open, it re-attaches to it.
-# otherwise, it checks if an .envrc file is present and starts a new tmux session using direnv exec.
-# otherwise, starts a new tmux session with that name.
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-# tat: tmux attach
-function tat {
-  name=$(basename `pwd` | sed -e 's/\.//g')
+# Not sure but uncomment this line change the ruby version to the version I need sometimes
+# eval "$(rbenv init - zsh)"
 
-  if tmux ls 2>&1 | grep "$name"; then
-    tmux attach -t "$name"
-  elif [ -f .envrc ]; then
-    direnv exec / tmux new-session -s "$name"
-  else
-    tmux new-session -s "$name"
-  fi
-}
+#if which rbenv > /dev/null; then eval "$(rbenv init -)"; fi
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"
+
+autoload -U +X bashcompinit && bashcompinit
+complete -o nospace -C /opt/homebrew/bin/terraform terraform
+export PATH="/opt/homebrew/opt/awscli@1/bin:$PATH"
