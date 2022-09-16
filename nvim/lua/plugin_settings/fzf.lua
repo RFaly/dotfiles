@@ -29,8 +29,6 @@ vim.api.nvim_set_keymap('n', '<Leader>bc', ':BCommits<CR>', { noremap = true, si
 vim.api.nvim_set_keymap('n', '<Leader>]', ':Tags<CR>', { noremap = true, silent = true })
 vim.api.nvim_set_keymap('n', '<Leader>b]', ':BTags<CR>', { noremap = true, silent = true })
 
-
-
 --[[
 
 " L' g:fzf_commits_log_optionsoption personnalise l'apparence de la commande Git log utilisée par les commandes :Commitset :BCommits.

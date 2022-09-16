@@ -3,11 +3,11 @@ return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
 
   -- LSP
-  use 'neovim/nvim-lspconfig'
-  use 'nvim-lua/completion-nvim'
+  -- use 'neovim/nvim-lspconfig'
+  -- use 'nvim-lua/completion-nvim'
 
-  use 'nanotee/nvim-lua-guide'
-  use 'hrsh7th/nvim-compe'
+  -- use 'nanotee/nvim-lua-guide'
+  -- use 'hrsh7th/nvim-compe'
 
   use {
    'kyazdani42/nvim-tree.lua',
@@ -24,7 +24,6 @@ return require('packer').startup(function()
   use 'tpope/vim-commentary'
   use 'tpope/vim-surround'
 
-  use 'christoomey/vim-tmux-navigator'
   use 'mbbill/undotree'
 
   -- fuzy file searcher with fzf
@@ -39,6 +38,7 @@ return require('packer').startup(function()
 
   use "lukas-reineke/indent-blankline.nvim"
 end)
+
 -- :PackerInstall for installing plugin
 -- nnoremap <leader>u :UndotreeShow<CR>
 

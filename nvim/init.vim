@@ -7,4 +7,6 @@ lua require('settings')
 lua require('plugin_settings/fzf')
 lua require('plugin_settings/fzf_mru')
 lua require('plugin_settings/material')
+lua require('plugin_settings/nvim-web-devicons')
+lua require('plugin_settings/nvim-tree-setup')
 
