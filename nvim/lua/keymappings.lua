@@ -40,6 +40,3 @@ vim.api.nvim_set_keymap('n', ',', ':tabedit<CR>', { noremap = true, silent = tru
 -- remove current tab
 vim.api.nvim_set_keymap('n', '<Leader>t', ':tabclose<CR>', { noremap = true, silent = true })
 
-
-
-
