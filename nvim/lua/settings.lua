@@ -49,4 +49,5 @@ vim.cmd('filetype plugin on')    -- Enable filetype-specific plugins
 vim.cmd([[autocmd FileType vue setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab]])
 vim.cmd([[autocmd FileType ruby setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab]])
 vim.cmd([[autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab]])
+vim.cmd([[autocmd FileType lua setlocal tabstop=2 shiftwidth=2 softtabstop=2 expandtab]])
 

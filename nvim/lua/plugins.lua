@@ -24,10 +24,16 @@ return require('packer').startup(function()
   -- plugin that adds Git diff signs and line highlighting in the sign column
   use 'lewis6991/gitsigns.nvim'
 
-  -- statusline written in Lua.
+  -- statusline written in Lua
   use {
     'nvim-lualine/lualine.nvim',
     requires = { 'kyazdani42/nvim-web-devicons', opt = true }
+  }
+  -- A snazzy 💅 buffer line
+  use {
+    'akinsho/bufferline.nvim',
+    tag = "v3.*",
+    requires = 'nvim-tree/nvim-web-devicons'
   }
 
   -- to comment out a line
@@ -43,7 +49,22 @@ return require('packer').startup(function()
   use 'vim-ruby/vim-ruby'
   use 'tpope/vim-rails'
 
-  -- -- fuzzy finder
+  -- advanced syntax highlighting and improved code analysis
+  use {
+      'nvim-treesitter/nvim-treesitter',
+      run = function()
+          local ts_update = require('nvim-treesitter.install').update({ with_sync = true })
+          ts_update()
+      end,
+  }
+
+  -- TELESCOPE IMPLEMENTATION
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
+  use {
+    'nvim-telescope/telescope.nvim', tag = '0.1.1',
+    requires = 'nvim-lua/plenary.nvim'
+  }
+
   -- https://github.com/nvim-telescope/telescope-file-browser.nvim#workflow
   -- use {
   --   'nvim-telescope/telescope.nvim', tag = '0.1.1',
